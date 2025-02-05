@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    border-bottom: 5px;
+    border-style: solid;
+    border-bottom-color: red;
+    border-top-color: black;
+    border-right-color: black;
+    border-left-color: black;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 20px;
+}
+
+header ul li {
+    margin: 0px 10px;
+}
+
+.header-button button:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 4%;
+}
+
+.container #intro {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.container #job-text{
+    max-width: 80%;
+    line-height: 25px;
+}
+
+.container #school-text {
+    max-width: 80%;
+    line-height: 25px;
+}
+
