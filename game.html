@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="index.html" class="header-button">
+                    <button>HOME</button>
+                </a>
+            </li>
+            <li>
+                <a href="abt-me.html" class="header-button">
+                    <button>ABOUT ME</button>
+                </a>
+            </li>
+            <li>
+                <a href="school.html" class="header-button">
+                    <button>SCHOOL</button>
+                </a>
+            </li>
+            <li>
+                <a href="game.html" class="header-button">
+                    <button>GAME</button>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <div id="game-intro">
+            <h1>Guess the Number!</h1>
+
+            <h2>Rules:</h2>
+
+            <div id="rules-container">
+                <p class="rules-text">
+                    The aim of the game is to guess the randomly selected number in as little
+                    guesses as possible.
+                </p>
+                <p class="rules-text">
+                    You will be alerted either "High", or "Low", giving you a hint
+                    if your guess was too high, or too low. Good luck!
+                </p>
+            </div>
+
+            <button id="game-start-btn" class="game-btn" onclick="StartGame()">START</button>
+
+        </div>
+            
+        <div id="game" class="container">
+            <h2 id="attempts">Attemps: 0</h2>
+            <div id="guess-form" class="container">
+                <div id="guess-input">
+                    <form>
+                        <label for="guess" id="guess-label">Guess: </label>
+                        <input type="number" id="guess" name="guess">
+                    </form>
+                </div>
+                <div id="high-low" class="container">
+                    <p id="high-low-text">Too High!</p>
+                </div>
+                <div id="game-buttons">
+                    <button class="game-btn" id="btn-guess" onclick="Guess()">GUESS</button>
+                    <button class="game-btn" id="btn-start-over" onclick="Reset()">START OVER</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

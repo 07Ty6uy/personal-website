@@ -61,3 +61,85 @@ h1 {
     line-height: 25px;
 }
 
+#rules-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rules-text {
+    max-width: 70%;
+    line-height: 25px;
+}
+
+.container #game-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: visible;
+}
+
+.game-btn {
+    width: 15vw;
+    height: 7.5vh;
+    max-width: 100px;
+
+    border-radius: 25%;
+    font-size: auto;
+
+    margin: 1vw;
+}
+
+#game-start-btn {
+    background-color: #25c45a;
+    margin: 3%;
+}
+
+#game {
+    display: none;
+}
+
+#attempts {
+    font-size: 350%;
+}
+
+#guess-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    margin: 2vh;
+}
+
+#game-buttons {
+    margin: 2vh;
+}
+
+#btn-guess {
+    background-color: #25c45a;
+    border-color: white;
+}
+
+#btn-start-over {
+    background-color: red;
+    border-color: black;
+}
+
+#btn-guess, #btn-start-over:hover {
+    cursor: pointer;
+}
+
+#guess-label {
+    font-size: 130%;
+}
+
+#high-low {
+    display: none;
+}
+
+.game-btn:hover {
+    cursor: pointer;
+}
