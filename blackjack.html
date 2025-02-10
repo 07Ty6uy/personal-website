@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blackjack-styles.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" class="header-button"><button>HOME</button></a></li>
+            <li><a href="abt-me.html" class="header-button"><button>ABOUT ME</button></a></li>
+            <li><a href="school.html" class="header-button"><button>SCHOOL</button></a></li>
+            <li><a href="game.html" class="header-button"><button>GAMES</button></a></li>
+        </ul>
+    </header>
+
+    <!-- Dropdown to select the game -->
+    <div class="dropdown-container">
+        <label for="choose-game">Select Game:</label>
+        <select id="choose-game">
+            <option value="guess-game">Guess the Number</option>
+            <option value="blackjack">Blackjack</option>
+        </select>
+    </div>
+
+    <!-- Guess the Number Game -->
+    <div id="guess-game" class="game-container">
+        <h1>Guess the Number!</h1>
+        <h2>Rules:</h2>
+        <div id="rules-container">
+            <p class="rules-text">
+                The aim of the game is to guess the randomly selected number in as few
+                guesses as possible.
+            </p>
+            <p class="rules-text">
+                You will be alerted either "High" or "Low" to guide your guess. Good luck!
+            </p>
+        </div>
+        <button id="game-start-btn" class="game-btn" onclick="StartGame()">START</button>
+
+        <div id="game">
+            <h2 id="attempts">Attempts: 0</h2>
+            <div id="guess-form">
+                <label for="guess">Guess: </label>
+                <input type="number" id="guess">
+                <button class="game-btn" id="btn-guess" onclick="Guess()">GUESS</button>
+                <button class="game-btn" id="btn-start-over" onclick="Reset()">START OVER</button>
+            </div>
+            <p id="high-low-text"></p>
+        </div>
+    </div>
+
+    <!-- Blackjack Game -->
+    <div id="blackjack" class="game-container" style="display: none;">
+        <h1>Blackjack</h1>
+        <div id="credits">Credits: <span id="credit-amount">500</span></div>
+        <div id="bet-container">
+            <label for="bet-amount">Bet:</label>
+            <input type="number" id="bet-amount" min="5" max="500" value="5">
+            <button id="place-bet">Place Bet</button>
+        </div>
+        
+        <div id="table">
+            <div id="dealer">
+                <h2>Dealer</h2>
+                <div id="dealer-cards"></div>
+            </div>
+            <div id="player">
+                <h2>Player</h2>
+                <div id="player-cards"></div>
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="hit" disabled>Hit</button>
+            <button id="stand" disabled>Stand</button>
+            <button id="double-down" disabled>Double Down</button>
+            <button id="split" disabled>Split</button>
+        </div>
+    </div>
+
+    <script src="guess-game.js"></script>
+    <script src="blackjack.js"></script>
+    <script>
+        document.getElementById('choose-game').addEventListener('change', function () {
+            let selectedGame = this.value;
+            document.getElementById('guess-game').style.display = selectedGame === 'guess-game' ? 'block' : 'none';
+            document.getElementById('blackjack').style.display = selectedGame === 'blackjack' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

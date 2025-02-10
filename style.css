@@ -143,3 +143,21 @@ h1 {
 .game-btn:hover {
     cursor: pointer;
 }
+
+#choose-game {
+    position: absolute;
+    right: 20px; /* Adjust distance from right */
+    top: 100px;   /* Adjust distance from top */
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+}
+
+#choose-game {
+    padding: 5px;
+    font-size: 16px;
+}
