@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Practice</title>
     <link rel="stylesheet" href="style.css">
-    <title>School</title>
 </head>
 <body>
     <header>
@@ -36,19 +36,23 @@
             </li>
         </ul>
     </header>
-
     <div class="container">
-        <h1>School</h1>
-
-        <div id="school" class="container">
-            <p id="school-text">
-                I have stayed in East Lansing ever since I started school. First 
-                was Pinecrest Elementary (now called Green Elementary), MacDonald
-                Middle School, and now East Lansing HighSchool. I also partake 
-                dual enrollment at LCC, hoping to transfer credits to MSU to
-                study for Computer Science.
-            </p>
+        <h1>Weather Information</h1>
+        <div id="weatherInfo" class="container">
+            <p id="city"></p>
+            <p id="temp"></p>
+            <p id="feelsLike"></p>
+            <div id="iconContainer">
+                <p id="descriptions"></p>
+                <img id="icon" src="" alt="Weather Icon" style="display: none;">
+            </div>
+            
         </div>
+        <input type="text" id="cityInput" placeholder="Enter city name"><br>
+        <button id="sub" onclick="fetchWeather()">Submit</button>
+
     </div>
+
+    <script src="weather.js"></script>
 </body>
 </html>
