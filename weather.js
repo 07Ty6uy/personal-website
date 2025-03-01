@@ -3,7 +3,7 @@ async function fetchWeather() {
 
     const cityInp = document.getElementById('cityInput').value;
     if (cityInp) {
-        url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${cityInp}`;
+        url = `https://api.weatherstack.com/current?access_key=${apiKey}&query=${cityInp}`;
     }
 
     try {
